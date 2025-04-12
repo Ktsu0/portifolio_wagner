@@ -1,0 +1,12 @@
+h1{text-align: center;
+    font-weight: bold;
+    color: black;
+    
+}
+p{text-align: justify;}
+a{color: rgb(1, 1, 99);}
+div{display: flex;
+justify-content: center;
+margin-top: 20px;}
+img{width: 500;
+}
