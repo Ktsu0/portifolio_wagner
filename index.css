@@ -1,22 +1,4 @@
 body{background-color: black;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-
-}
-.quadrado{
-    width: 50vh;
-    height: 50vh;
-    background-color:aliceblue;
-    margin: 25vh 78.75vh;
-    padding: 10vh;
-}
-.quadrado2{
-  background-color: yellowgreen;
-  margin: 0;
-  width: 50vh;
-  height: 50vh;
-  justify-content:space-around;
-}
-
+    display: grid;
+    grid;     
+    }
