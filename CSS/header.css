@@ -1,0 +1,50 @@
+header{
+    width: 100%;
+    height: 16%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: antiquewhite;
+}
+#logo_profession{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+#logo{
+    width: 11%;
+    height: 60%;
+
+    background-color: aqua;
+
+}
+#profession{
+    font-size: 2vw;
+
+    margin: 0 5%;
+}
+#btns_header{
+    width: 35%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn_header{
+    width: 30%;
+    height: 40%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}

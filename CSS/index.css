@@ -1,0 +1,19 @@
+@import url(./header.css);
+@import url(./main.css);
+@import url(./footer.css);
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(191, 197, 197);
+
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
