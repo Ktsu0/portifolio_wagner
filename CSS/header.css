@@ -7,11 +7,12 @@ header{
     justify-content: space-around;
     align-items: center;
 
-    background-color: antiquewhite;
 }
 #logo_profession{
     width: 50%;
     height: 100%;
+
+    color: aliceblue;
 
     display: flex;
     flex-direction: row;
@@ -21,15 +22,310 @@ header{
 #logo{
     width: 11%;
     height: 60%;
-
-    background-color: aqua;
-
+    border-radius: 80%;
 }
+
 #profession{
     font-size: 2vw;
 
     margin: 0 5%;
 }
+
+/* From Uiverse.io by 0x-maker */ 
+.loader {
+  display: flex;
+  width: 8rem;
+  height: 8rem;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  width: 100%;
+  height: 100%;
+  background-color: #0e5f229d;
+  
+  border-radius: 50%;
+  animation: move 3s linear infinite;
+  box-shadow: 0 1rem 1rem #0b2b20;
+  filter: blur(0.3rem);
+  z-index: 1;
+}
+
+.eye {
+  display: flex;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color: #dadddfa4;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 1rem #000000;
+  animation: move 5s alternate infinite;
+}
+
+.eye::before {
+  content: "";
+  display: flex;
+  width: 1rem;
+  height: 2rem;
+  background-color: #000;
+  border-radius: 50%;
+  animation: blink 4s ease-in-out alternate infinite;
+}
+
+.flames {
+  display: flex;
+  position: absolute;
+  z-index: 0;
+}
+
+.particle {
+  display: flex;
+  position: absolute;
+  background-color: #0e5f229d;
+  border-radius: 50%;
+  filter: blur(0.3rem);
+  border-top: 5px solid #0e5f229d;
+  border-left: 5px solid #0e5f229d;
+}
+
+.flames::before {
+  content: "";
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background: #11034edc;
+  filter: blur(5rem);
+  opacity: 0.5;
+  border-radius: 50%;
+  top: -8rem;
+  left: -4rem;
+  z-index: 4;
+  animation: pulse 3s linear infinite;
+}
+
+.particle:nth-child(1) {
+  width: 4rem;
+  height: 4rem;
+  top: -6rem;
+  animation: move 7s alternate-reverse infinite;
+}
+
+.particle:nth-child(2) {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -8rem;
+  left: -5rem;
+  animation: move 1.5s ease-in-out reverse infinite;
+}
+
+.particle:nth-child(3) {
+  width: 4rem;
+  height: 4rem;
+  top: -5rem;
+  left: -4rem;
+  animation: move 8s alternate-reverse infinite;
+}
+
+.particle:nth-child(4) {
+  width: 3rem;
+  height: 3rem;
+  top: -7.5rem;
+  animation: move 4s alternate-reverse infinite;
+}
+
+.particle:nth-child(5) {
+  width: 2rem;
+  height: 2rem;
+  top: -9rem;
+  left: 1rem;
+  animation: move 2.5s alternate-reverse infinite;
+}
+
+.particle:nth-child(6) {
+  width: 2rem;
+  height: 2rem;
+  top: -6.8rem;
+  left: -1.5rem;
+  animation: move 5s alternate-reverse infinite;
+}
+
+.particle:nth-child(7) {
+  width: 1rem;
+  height: 1rem;
+  top: -10rem;
+  left: -1rem;
+  animation: move 1.2s alternate-reverse infinite;
+}
+
+.particle:nth-child(8) {
+  width: 1.3rem;
+  height: 1.3rem;
+  top: -7.5rem;
+  left: -2rem;
+  animation: move 2.5s alternate-reverse infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(4px, 6px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes blink {
+  20% {
+    transform: translate(0, 0);
+    height: 2rem;
+  }
+
+  30% {
+    height: 0;
+  }
+
+  40% {
+    transform: translate(5px, 10px);
+    height: 0;
+  }
+
+  50% {
+    height: 2rem;
+  }
+
+  70% {
+    transform: translate(-10px, -10px);
+  }
+
+  90% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+
+    .btn2{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fefefe;
+    text-transform: uppercase;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  
+  .btn2::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - -2px);
+    --s: 11vw; /* control the size */
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+  }
+  
+  .btn2::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 50px);
+    --s: 11vw; /* control the size */
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+  }
+  
+  .btn2:hover::before {
+    transform: translateY(-25px);
+    height: 0;
+  }
+  
+  .btn2:hover::after {
+    transform: scaleX(0);
+    transition-delay: 0.15s;
+  }
+  
+  .btn2:hover {
+    border: 2px solid #fefefe;
+  }
+  
+  .btn2 span {
+    position: relative;
+    z-index: 3;
+  }
+  
+  button {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+  }
+
+
+
+  /* }
 #btns_header{
     width: 35%;
     height: 100%;
@@ -38,6 +334,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
 }
 .btn_header{
     width: 30%;
@@ -47,4 +344,5 @@ header{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-}
+}    */
+/* From Uiverse.io by TISEPSE */
