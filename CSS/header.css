@@ -46,7 +46,7 @@ header{
   height: 100%;
   background-color: #0e5f229d;
   
-  border-radius: 50%;
+  border-radius:45% 37% 44% 31% / 49% 43% 32% 42%;
   animation: move 3s linear infinite;
   box-shadow: 0 1rem 1rem #0b2b20;
   filter: blur(0.3rem);
@@ -64,7 +64,7 @@ header{
   justify-content: center;
   z-index: 2;
   box-shadow: 0 0 1rem #000000;
-  animation: move 5s alternate infinite;
+  animation: move 6s alternate infinite;
 }
 
 .eye::before {
@@ -74,7 +74,7 @@ header{
   height: 2rem;
   background-color: #000;
   border-radius: 50%;
-  animation: blink 4s ease-in-out alternate infinite;
+  animation: blink 6s ease-in-out alternate infinite;
 }
 
 .flames {

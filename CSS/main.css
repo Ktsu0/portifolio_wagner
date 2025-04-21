@@ -12,17 +12,14 @@ main{
 #img_p{
     width:30% ;
     height:60%;
-    
-    clip-path: ellipse(98% 98% at 1% 16%);
-    border-radius: 5% 5% 5% 20%;
+
+    border-radius: 43% 43% 39% 30% / 34% 59% 36% 47%;
     background-color:rgb(212, 224, 224);
     
 }
-#main_text{
+.main_text{
     width:35% ;
     height:50% ;
-
-    color: aliceblue;
 
     display: flex;
     flex-direction: column;
@@ -31,22 +28,66 @@ main{
     position: relative;
 
 }
+
+.text_effect {
+    background: linear-gradient(to right, #d31056, #ff7e05);
+    border-radius: 0.9em;
+    transition: all 0s ease;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    position: relative;
+    padding: 0.2em;
+  }
+  
+  .text_effect::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 0.9em;
+    z-index: -1;
+    filter: blur(0);
+    transition: filter 0s ease;
+    background: transparent;
+  }
+  
+  .text_effect:hover::before {
+    background: linear-gradient(#d31056, #ff7e05);
+    filter: blur(1.2em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .text_effect:active::before {
+    filter: blur(1.2em);
+  }
+.text_info{
+    background-image: linear-gradient(to right,#ff7e05, #d31056);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+
+
+
 #name{
     font-size: 3vw;
     
     margin: 0;
 
 }
+
 #last_name{
     font-size: 2.6vw;
 
     margin: 0;
-
 }
+
 #text_info{
     color: aliceblue;
     font-size: 1vw;
-    position: absolute;
+
     left: 37%;
     top:50% ;
 
