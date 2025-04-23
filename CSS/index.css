@@ -12,13 +12,13 @@ body{
     padding: 0;
 
   --s: 11vw; /* control the size */
-  --c1: #1d1d1d;
-  --c2: #4e4f51;
-  --c3: #3c3c3c;
+  --c1: var(--black);
+  --c2: var(--light_gray);
+  --c3: var(--gray);
 
   background: repeating-conic-gradient(
         from 30deg,
-        #0000 0 120deg,
+        var(--black_shadow) 0 120deg,
         var(--c3) 0 180deg
       )
       calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
@@ -29,6 +29,23 @@ body{
       var(--c3) 0 180deg
     );
   background-size: var(--s) calc(var(--s) * 0.577);
+}
+
+:root{
+  /* background body*/
+  --black: #1d1d1d;
+  --black_shadow:#ec070700;
+  --gray: #3c3c3c;
+  --light_gray: #4e4f51;
+
+  /* Text Btns*/
+  --white: aliceblue;
+
+  /* Text Color*/
+  --white: aliceblue;
+  --cyan: #64b4f6;
+  --light_cyan:#64b4f6ec;
+
 }
 
   
