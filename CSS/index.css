@@ -2,39 +2,39 @@
 @import url(./main.css);
 @import url(./footer.css);
 
-body{
-    width: 100vw;
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
-    /* background: radial-gradient(#02012d 0%, #00054d 100%); */
+body {
+  width: 100vw;
+  height: 100vh;
 
-    margin: 0;
-    padding: 0;
+  /* background: radial-gradient(#02012d 0%, #00054d 100%); */
 
-  --s: 11vw; /* control the size */
+  margin: 0;
+  padding: 0;
+
+
+
+  --s: 11vw;
+  /* control the size */
   --c1: var(--black);
   --c2: var(--light_gray);
   --c3: var(--gray);
 
-  background: repeating-conic-gradient(
-        from 30deg,
-        var(--black_shadow) 0 120deg,
-        var(--c3) 0 180deg
-      )
-      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
-    repeating-conic-gradient(
-      from 30deg,
+  background: repeating-conic-gradient(from 30deg,
+      var(--black_shadow) 0 120deg,
+      var(--c3) 0 180deg) calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(from 30deg,
       var(--c1) 0 60deg,
       var(--c2) 0 120deg,
-      var(--c3) 0 180deg
-    );
+      var(--c3) 0 180deg);
   background-size: var(--s) calc(var(--s) * 0.577);
 }
 
-:root{
+:root {
   /* background body*/
   --black: #1d1d1d;
-  --black_shadow:#ec070700;
+  --black_shadow: #ec070700;
   --gray: #3c3c3c;
   --light_gray: #4e4f51;
 
@@ -44,16 +44,10 @@ body{
   /* Text Color*/
   --white: aliceblue;
   --cyan: #64b4f6;
-  --light_cyan:#64b4f6ec;
+  --light_cyan: #64b4f6ec;
+
+
+  --fontP: "Exo 2";
+  --fontS: "Alegreya Sans";
 
 }
-
-  
-
-
-
-
-
-
-
-
