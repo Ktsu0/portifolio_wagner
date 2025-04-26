@@ -11,20 +11,14 @@ main{
 }
 
 #img_p{
-  width: 31%;
-  height: 82%;
-  -webkit-mask-image: url(./../Img/img_s.png); /* Caminho da imagem PNG com transparência */
-  mask-image: url(./../Img/img_s.png);
-  -webkit-mask-size:cover;
-  mask-size: cover;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+  width:30%;
+  height:88%;
+   background-image: url(./../Img/img_p.png);
+   border-radius: 43% 43% 39% 30% / 34% 45% 58% 47%; 
+   background-size: cover;
+   background-position:center -5vh;    
+} 
 
-  background-image: url(./../Img/img_p.png); /* Aqui vai a sua foto */
-  background-size:25vw;
-  background-position:center 5vh;
-  background-repeat: no-repeat;  
-}
 
 
 
@@ -98,82 +92,7 @@ main{
     margin: 0;
 }
 
-/* From Uiverse.io by RodolpheANDRIEUX */ 
-.cube-container {
-  width: 200px;
-  height: 200px;
-  perspective: 800px;
-  margin: 50px auto;
-  transition: 0.8s ease-out;
-}
 
-.cube-container:hover {
-  transform: scale(2);
-}
-
-.cube {
-  position: relative;
-  width: 20%;
-  height: 20%;
-  transform-style: preserve-3d;
-  animation: rotate 20s infinite linear;
-}
-
-.face {
-  --french: linear-gradient(
-      to right,
-      #0000ff,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ff0000
-    )
-    1;
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  color: white;
-  font-size: 18px;
-  text-align: center;
-  line-height: 200px;
-  background: #000000cc;
-  border: 2px solid;
-  border-image: var(--french);
-}
-
-.front {
-  transform: translateZ(100px);
-}
-
-.back {
-  transform: rotateY(180deg) translateZ(100px);
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(100px);
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(100px);
-}
-
-.top {
-  transform: rotateX(90deg) translateZ(100px);
-}
-
-.bottom {
-  transform: rotateX(-90deg) translateZ(100px);
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotateX(0) rotateY(0) rotateZ(0);
-  }
-
-  100% {
-    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-  }
-}
 
 
 /* #img_s{

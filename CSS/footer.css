@@ -11,151 +11,101 @@ footer{
 
 }
 
-#wrapper {
-    width: 20%;
-    height: 100%;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .circle {
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    border-radius: 50%;
-    
-    left: 15%;
-    transform-origin: 50%;
-    animation:circle7124 15s alternate infinite ease;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-  }
-  .icon{
-    font-size:3.8vh;
-    color: var(--white)
-  }
-  .icon:hover{
-    font-size:4.3vh;
-    color: var(--cyan);
-  }
-
-  @keyframes circle7124 {
-    0%, 46.51%, 56.49%, 100% {
-      top: 50%;
-      height: 40%;
-      width: 10%;
-      border-radius: 50%;
-      transform: scaleX(1.7) translateY(0);
-    }
-    50% {
-      top: -10%;
-      height: 50%;
-      border-radius: 50%;
-      transform: scaleX(1) translateY(-20px); 
-    }
-      
-    51.63%, 52.32% {
-      top: -25%;
-      height: 40%;
-      width: 10%;
-      border-radius: 50%;
-      transform: scaleX(1.7) translateY(0); 
-    }
-    
-     
-    
-    }
-  .circle:nth-child(2) {
-    left: 45%;
-    animation-delay:0.2s;
-  }
-  
-  .circle:nth-child(3) {
-    left: auto;
-    right: 15%;
-    animation-delay:0.4s;
-  }
-  
-  /* .shadow {
-    width: 10%;
-    height: 2%;
-    border-radius: 50%;
-    background-color: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 62px;
-    transform-origin: 50%;
-    z-index: -1;
-    left: 15%;
-    filter: blur(1px);
-    animation: shadow046 .3s alternate infinite ease;
-  }
-  
-  @keyframes shadow046 {
-    0% {
-      transform: scaleX(1.5);
-    }
-  
-    40% {
-      transform: scaleX(1);
-      opacity: .7;
-    }
-  
-    100% {
-      transform: scaleX(.2);
-      opacity: .4;
-    }
-  }
-  
-  .shadow:nth-child(4) {
-    left: 45%;
-    animation-delay: .0s
-  }
-  
-  .shadow:nth-child(5) {
-    left: auto;
-    right: 15%;
-    animation-delay: .0s;
-  } */
-
  
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  gap: 20px;
+}
+
+#btns_footer{
+  width: 13%;
+  height: 100%;
   
-
-  /* #btns_footer{
-    width: 10%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
 }
-#btn_footer{
-    width: 30%;
-    height: 60%;
-    border-radius: 100%;
-    background-color: black;
+.btn_footer{
+  width: 40%;
+  height: 60%;
+  border-radius: 100%;
+  background-color: transparent;
 
-    margin: 0;
-    padding: 0;
-} */
-/* From Uiverse.io by mobinkakei */ 
+  margin: 0;
+  padding: 0;
+} 
 
 
-/* 0% {
-      top: 80%;
-      height: 5%;
-      border-radius: 50px 50px 25px 25px;
-      transform: scaleX(1.7);
-    }
+
+.icon{
+  font-size:4.8vh;
+  color: var(--white);
+}
+
+/* github*/
+.iconone:hover {
+  color: var(--black);
+  transition-duration:0.5s;
+  transform: scale(1.2); 
+}
+
+/* Whatsapp*/
+.icontwo:hover {
+  color: var(--green);
+  transition-duration:0.5s;
+  transform: scale(1.2) translateY(-5px);
+}
+
+/* instagram*/
+.icontheer:hover {
+  color: var(--pink);
+  transition-duration:0.5s;
+  transform: scale(1.2);
   
-    40% {
-      height: 50%;
-      border-radius: 50%;
-      transform: scaleX(1);
-    }
-  
-    100% {
-      top: 0%;
-    } */
+}
+
+
+
+
+#btns_footer:active {
+  transform: scale(0.9);
+  transition-duration:0.5s;
+}
+
+.btn_footer:hover .icon {
+  animation: slide-in-top 0.5s ease forwards;
+}
+
+.iconone:hover {
+  color: #050704;
+}
+
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
