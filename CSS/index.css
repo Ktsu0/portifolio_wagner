@@ -12,7 +12,7 @@ body {
 
   margin: 0;
   padding: 0;
-
+  overflow: hidden;
 
 
   --s: 11vw;
@@ -43,6 +43,7 @@ body {
 
   /* Text Color*/
   --white: aliceblue;
+  --white_shadow: rgba(240, 248, 255, 0.528);
   --cyan: #64b4f6;
   --light_cyan: #64b4f6ec;
 

@@ -20,32 +20,11 @@ header {
   align-items: center;
   justify-content: start;
 }
-
-#logo {
-  width: 11%;
-  height: 60%;
-  border-radius: 80%;
-}
-
 #profession {
   font-size: 2vw;
-
+  
   margin: 0 5%;
 }
-
-.btn2 {
-  position: relative;
-  display: inline-block;
-  padding: 15px 30px;
-  text-transform: uppercase;
-  color: var(--black);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 2vh;
-  transition: 0.3s;
-  background-color:white;
-}
-
 
 
 /* From Uiverse.io by doniaskima */ 
@@ -60,8 +39,9 @@ header {
 }
 
 .btn_53 {
+  width: 12vw;
+  height: 6vh;
   -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: button;
   background-color: #000;
   background-image: none;
   color: #fff;
@@ -69,10 +49,9 @@ header {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: 100%;
+  font-size: 0.8vw;
   line-height: 1.5;
   margin: 0;
-  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0;
 }
 
@@ -106,15 +85,23 @@ header {
 }
 
 .btn_53 .original {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
   background: #fff;
   color: #000;
-  display: grid;
   inset: 0;
   place-content: center;
   position: absolute;
   transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
 }
-
+.icon_h{
+    margin-right: 1vh;
+}
+.icon_h:hover{
+    transform: scale(1.5);
+}
 .btn_53:hover .original {
   transform: translateY(100%);
 }
@@ -127,6 +114,7 @@ header {
   opacity: 0;
   transform: translateY(-15px);
   transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+  
 }
 
 .btn_53 span:nth-child(2n) {
@@ -136,32 +124,160 @@ header {
 .btn_53:hover span {
   opacity: 1;
   transform: translateY(0);
+  transition-delay: 0.4s;
+  
 }
 
 .btn_53:hover span:nth-child(2) {
-  transition-delay: 0.3s;
+  transition-delay: 0.5s;
 }
 
 .btn_53:hover span:nth-child(3) {
-  transition-delay: 0.6s;
+  transition-delay: 0.7s;
 }
 
 .btn_53:hover span:nth-child(4) {
-  transition-delay: 0.8s;
+  transition-delay: 0.9s;
 }
 
 .btn_53:hover span:nth-child(5) {
-  transition-delay: 0.10s;
+  transition-delay: 1.1s;
 }
 
 .btn_53:hover span:nth-child(6) {
-  transition-delay: 0.12s;
+  transition-delay: 1.3s;
 }
 
+.btn_53:hover span:nth-child(7) {
+    transition-delay: 1.5s;
+}
 
+.btn_53:hover span:nth-child(8) {
+    transition-delay: 1.7s;
+}  
 
+.btn_53:hover span:nth-child(9) {
+    transition-delay: 2s;
+}
  
+@media (max-width:1270px){
+  header{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    
+}
+.btn_53{
+  width:30%;
+  height:10%;
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  font-size: 1vw;
+}
+#btns_header {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+  width: 40%;
+  }       
+}
 
-@media (max-width){
-
+@media (max-width:900px){
+    header{
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        
+    
+    }
+    #profession{
+      
+      font-size:3vh;
+    }
+    .btn_53{
+        font-size: 1.4vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+    }
+    #btns_header {
+        width:40% ;
+        height:37%;
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-around;
+        
+        }
+    .icon_h{
+        margin-right: 1vh;
+    }   
+}
+@media (max-width:480px){
+    header{
+        height: 8%;
+        display: flex;
+        flex-direction: row;
+    }
+    #logo_profession{
+      width: 95%;
+    }
+    #profession{
+      font-size:4vh;
+    }
+    
+    .btn_53{
+      width: 8vw; 
+      height: 8vw;
+      font-size: 1vh; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      position: relative;
+      border-radius: 50%; 
+      padding: 0;
+      overflow: hidden;
+      
+    }
+    .btn_53 .original {
+      display: none;
+    }
+    .btn_53 .letters{
+      display: none;
+    }
+    #btns_header {
+      position: fixed;
+      top: 1vh;
+      right: 1vw;
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1vh; 
+      align-items: center;
+      background: transparent;
+      z-index: 9999;
+    }
+    .icon_h {
+      margin: 0; 
+      font-size: 3vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  .btn_53:hover .icon_h,
+  .btn_53:active .icon_h {
+    color:var(--black); 
+  }
+  .btn_53:hover,
+  .btn_53:active {
+    background-color:var(--white); 
+    transform: scale(1.1); 
+  }
 }
