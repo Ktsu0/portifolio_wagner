@@ -63,7 +63,7 @@
   position: absolute;
   width: 8rem;
   height: 8rem;
-  background: #11034edc;
+  background: #0e5f229d;
   filter: blur(5rem);
   opacity: 0.5;
   border-radius: 50%;
@@ -74,13 +74,64 @@
 }
 
 .particle {
-  display: flex;
   position: absolute;
-  background-color: #0e5f229d;
+  width: 6px;
+  height: 6px;
+  background: #0e5f2269;
   border-radius: 50%;
-  filter: blur(0.3rem);
-  border-top: 5px solid #0e5f229d;
-  border-left: 5px solid #0e5f229d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+}
+
+#ghost.fade-out .particle {
+  animation: disperse 1s forwards;
+}
+
+@keyframes disperse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(
+      calc(-50% + (var(--dx, 0px))),
+      calc(-50% + (var(--dy, 0px)))
+    ) scale(3);
+    opacity: 0;
+  }
+}
+.ghost-fog {
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  background: radial-gradient(circle, #0e5f22 10%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: fogMove 8s ease-in-out infinite;
+  transition: opacity 1s ease;
+  filter: blur(1.5rem);
+}
+
+.loader.hidden + .ghost-fog {
+  opacity: 1;
+}
+
+@keyframes fogMove {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(10px, -10px) scale(1.05);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
 }
 
 .particle:nth-child(1) { width: 4rem; height: 4rem; top: -6rem; animation: move-particle 7s alternate-reverse infinite; }

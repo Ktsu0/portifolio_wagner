@@ -22,78 +22,49 @@ header {
 }
 #programming-title {
   display: flex;
-  flex-wrap: wrap;
-  font-size: 3rem; /* Ajuste conforme necessário */
+  flex-wrap: nowrap;
+  color: var(--white);
+  font-size: 4vh;
   font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin: 0;
+  letter-spacing: 0.05em;
   overflow: hidden;
+  white-space: nowrap;
+  line-height: 1.1;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  gap: 0.2vh;
 }
-
-#programming-title span {
+.letter {
   opacity: 0;
-  transform: translateY(-100%);
   display: inline-block;
-  animation: fall 3s ease-out forwards;
-  margin-right: 0.1em; /* Espaçamento entre as letras */
+  transform: translateY(-100%);
+  transition: transform 1.5s ease, opacity 1s ease;
 }
 
-/* Animar as letras uma a uma */
-#programming-title span:nth-child(1) { animation-delay: 0s; }
-#programming-title span:nth-child(2) { animation-delay: 0.1s; }
-#programming-title span:nth-child(3) { animation-delay: 0.2s; }
-#programming-title span:nth-child(4) { animation-delay: 0.3s; }
-#programming-title span:nth-child(5) { animation-delay: 0.4s; }
-#programming-title span:nth-child(6) { animation-delay: 0.5s; }
-#programming-title span:nth-child(7) { animation-delay: 0.6s; }
-#programming-title span:nth-child(8) { animation-delay: 0.7s; }
-#programming-title span:nth-child(9) { animation-delay: 0.8s; }
-#programming-title span:nth-child(10) { animation-delay: 0.9s; }
-#programming-title span:nth-child(11) { animation-delay: 1s; }
-#programming-title span:nth-child(12) { animation-delay: 1.1s; }
-#programming-title span:nth-child(13) { animation-delay: 1.2s; }
-#programming-title span:nth-child(14) { animation-delay: 1.3s; }
-#programming-title span:nth-child(15) { animation-delay: 1.4s; }
-#programming-title span:nth-child(16) { animation-delay: 1.5s; }
-#programming-title span:nth-child(17) { animation-delay: 1.6s; }
-#programming-title span:nth-child(18) { animation-delay: 1.7s; }
-#programming-title span:nth-child(19) { animation-delay: 1.8s; }
-#programming-title span:nth-child(20) { animation-delay: 1.9s; }
-#programming-title span:nth-child(21) { animation-delay: 2s; }
-#programming-title span:nth-child(22) { animation-delay: 2.1s; }
-
-@keyframes fall {
-  0% {
-      opacity: 0;
-      transform: translateY(-100%);
-  }
-  50% {
-      opacity: 1;
-      transform: translateY(20px);
-  }
-  100% {
-      opacity: 1;
-      transform: translateY(0);
-  }
+.letter.up {
+  transform: translateY(-30px);
+}
+.letter.down {
+  transform: translateY(30px);
 }
 
-/* A animação recomeça após 30 segundos */
-@keyframes restart {
-  0% {
-      opacity: 1;
-      transform: translateY(0);
-  }
-  100% {
-      opacity: 0;
-      transform: translateY(-100%);
-  }
+.letter.enter {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-#programming-title {
-  animation: fall 3s ease-out forwards, restart 30s ease-in-out infinite;
+.letter.exit-up {
+  opacity: 0;
+  transform: translateY(-30px);
 }
 
+.letter.exit-down {
+  opacity: 0;
+  transform: translateY(30px);
+}
 
 /* From Uiverse.io by doniaskima */ 
 .btn_53,
@@ -117,7 +88,7 @@ header {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: 0.8vw;
+  font-size: 2vh;
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -142,12 +113,12 @@ header {
 
 .btn_53 {
   border: 1px solid;
-  border-radius: 999px;
+  border-radius: 5vh;
   box-sizing: border-box;
   display: inline-block;
   font-weight: 900;
   overflow: hidden;
-  padding: 1.2rem 3rem;
+  
   position: relative;
   text-transform: uppercase;
 }
@@ -234,23 +205,25 @@ header {
     display: flex;
     flex-direction: row;
     
+    
 }
 .btn_53{
   width:30%;
-  height:10%;
-  font-size: 2vw;
+  height:100%;
+  font-size: 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   position: relative;
-  font-size: 1vw;
+
 }
 #btns_header {
   display: flex;
   flex-direction: row; 
   justify-content: space-around;
   width: 40%;
+  height: 60%;
   }       
 }
 
@@ -262,9 +235,9 @@ header {
         
     
     }
-    #profession{
+    #programming-title{
       
-      font-size:2.5vh;
+      font-size:1.5vh;
     }
     .btn_53{
         font-size: 1.4vw;
@@ -275,7 +248,7 @@ header {
         position: relative;
     }
     #btns_header {
-        width:40% ;
+        width:40%;
         height:37%;
         display: flex;
         flex-direction: row; 
@@ -283,7 +256,7 @@ header {
         
         }
     .icon_h{
-        margin-right: 1vh;
+        margin-right: 0.2vh;
     }   
 }
 @media (max-width:480px){
