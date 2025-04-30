@@ -31,6 +31,67 @@ body {
   background-size: var(--s) calc(var(--s) * 0.577);
 }
 
+.corner-square {
+  width: 40px;
+  height: 40px;
+  background-color: #00ff88;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  animation: moveCorners 20s linear infinite;
+  border-radius: 8px;
+}
+
+.corner-square:hover {
+  animation-play-state: paused;
+  background-color: transparent;
+}
+
+
+.center-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: auto;
+  display: none;
+  z-index: 10000;
+}
+
+.corner-square:hover + .center-image {
+  display: block;
+}
+
+@keyframes moveCorners {
+  0% {
+    top: 0;
+    left: 0;
+    background-color: #128c5b;
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 40px);
+    background-color: #095034;
+  }
+  50% {
+    top: calc(100% - 40px);
+    left: calc(100% - 40px);
+    background-color: #098151;
+  }
+  75% {
+    top: calc(100% - 40px);
+    left: 0;
+    background-color: #18a96f;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background-color: #128c5b;
+  }
+}
+
 :root {
   /* background body*/
   --black: #1d1d1d;

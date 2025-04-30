@@ -37,7 +37,7 @@ main{
 .text_effect {
     background: linear-gradient(to right, var(--cyan), var(--white));
     border-radius: 0.9em;
-    transition: all 0s ease;
+    transition: all 0s ease-in-out;
     -webkit-background-clip: text;
     color: transparent;
     display: inline-block;
@@ -55,7 +55,7 @@ main{
     border-radius: 0.9em;
     z-index: -1;
     filter: blur(0);
-    transition: filter 0s ease;
+    transition: filter 0s ease-in-out;
     background: transparent;
   }
   
