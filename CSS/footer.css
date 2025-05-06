@@ -86,7 +86,7 @@ footer{
 }
 
 .iconone:hover {
-  color: #050704;
+  color: var(--black);
 }
 
 

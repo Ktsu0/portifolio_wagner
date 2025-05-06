@@ -19,9 +19,6 @@ main{
    background-position:center -5vh;    
 } 
 
-
-
-
 .main_text{
     width:50% ;
     height:50% ;
@@ -35,7 +32,7 @@ main{
 }
 
 .text_effect {
-    background: linear-gradient(to right, var(--cyan), var(--white));
+    background-color: var(--white);
     border-radius: 0.9em;
     transition: all 0s ease-in-out;
     -webkit-background-clip: text;
@@ -60,7 +57,7 @@ main{
   }
   
   .text_effect:hover::before {
-    background: linear-gradient(to right, var(--cyan), var(--white));
+    background:linear-gradient(var(--gray),var(--black));
     filter: blur(1.2em);
     display: flex;
     align-items: center;
@@ -69,8 +66,8 @@ main{
   .text_effect:active::before {
     filter: blur(1.2em);
   }
-.text_info{
-    background-image: linear-gradient(to right, var(--white), var(--light_cyan));
+  .text_info{
+    background-color:var(--white);
     -webkit-background-clip: text;
     color: transparent;
     display: inline-block;

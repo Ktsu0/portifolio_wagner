@@ -1,21 +1,18 @@
-@import url(./header.css);
+@import url(./header/header.css);
 @import url(./main.css);
 @import url(./footer.css);
-
+@import url(./positioning.css);
+@import url(./color.css);
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
   width: 100vw;
   height: 100vh;
-
-  /* background: radial-gradient(#02012d 0%, #00054d 100%); */
-
   margin: 0;
   padding: 0;
   overflow: hidden;
 
-
-  --s: 11vw;
+   --s: 11vw;
   /* control the size */
   --c1: var(--black);
   --c2: var(--light_gray);
@@ -30,169 +27,3 @@ body {
       var(--c3) 0 180deg);
   background-size: var(--s) calc(var(--s) * 0.577);
 }
-
-.corner-square {
-  width: 40px;
-  height: 40px;
-  background-color: #00ff88;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  animation: moveCorners 20s linear infinite;
-  border-radius: 8px;
-}
-
-.corner-square:hover {
-  animation-play-state: paused;
-  background-color: transparent;
-}
-
-.center-image {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30vw;
-  height: auto;
-  display: none;
-  z-index: 10000;
-}
-
-.corner-square:hover + .center-image {
-  display: block;
-}
-
-@keyframes moveCorners {
-  0% {
-    top: 0;
-    left: 0;
-    background-color: #128c5b;
-  }
-  25% {
-    top: 0;
-    left: calc(100% - 40px);
-    background-color: #095034;
-  }
-  50% {
-    top: calc(100% - 40px);
-    left: calc(100% - 40px);
-    background-color: #098151;
-  }
-  75% {
-    top: calc(100% - 40px);
-    left: 0;
-    background-color: #18a96f;
-  }
-  100% {
-    top: 0;
-    left: 0;
-    background-color: #128c5b;
-  }
-}
-
-:root {
-  /* background body*/
-  --black: #1d1d1d;
-  --black_shadow: #ec070700;
-  --gray: #3c3c3c;
-  --light_gray: #4e4f51;
-
-  /* Text Btns*/
-  --white: aliceblue;
-
-  /* Text Color*/
-  --white: aliceblue;
-  --white_shadow: rgba(240, 248, 255, 0.528);
-  --cyan: #64b4f6;
-  --light_cyan: #64b4f6ec;
-
-  /*Btns*/
-  --green: #128c5b;
-  --pink: #d62976;
-
-
-  --fontP: "Exo 2";
-  --fontS: "Alegreya Sans";
-
-}
-
-
-
-/* From Uiverse.io by elisapi  
-.card {
-  width: fit-content;
-  height: fit-content;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  gap: 20px;
-}
-
-/* for all social containers
-.socialContainer {
-  width: 52px;
-  height: 52px;
-  background-color: rgb(65, 29, 131);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition-duration: 0.3s;
-  border-radius: 30px;
-}
-/* instagram
-.containerOne:hover {
-  background-color: #d62976;
-  transition-duration: 0.3s;
-  transform: scale(1.2);
-}
-/* twitter
-.containerTwo:hover {
-  background-color: #00acee;
-  transition-duration: 0.3s;
-  transform: scale(1.2);
-}
-/* linkdin
-.containerThree:hover {
-  background-color: #0072b1;
-  transition-duration: 0.3s;
-  transform: scale(1.2);
-}
-/* Whatsapp
-.containerFour:hover {
-  background-color: #128c7e;
-  transition-duration: 0.3s;
-  transform: scale(1.2);
-}
-
-.socialContainer:active {
-  transform: scale(0.9);
-  transition-duration: 0.3s;
-}
-
-.socialSvg {
-  width: 17px;
-}
-
-.socialSvg path {
-  fill: rgb(255, 255, 255);
-}
-
-.socialContainer:hover .socialSvg {
-  animation: slide-in-top 0.3s both;
-}
-
-@keyframes slide-in-top {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}*/
