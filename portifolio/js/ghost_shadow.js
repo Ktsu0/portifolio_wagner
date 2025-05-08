@@ -1,6 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
+export function GhostShadow() {
   const ghost = document.querySelector('.loader');
-  const particles = ghost.querySelectorAll('.particle');
+  const particles = ghost?.querySelectorAll('.particle');
+
+  if (!ghost || !particles.length) {
+    console.log("Fantasma ou partículas não encontrados!");
+    return;
+  }
 
   function hideGhost() {
     console.log("Fantasma clicado!");
@@ -31,9 +36,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 10000);
   }
 
-  if (ghost) {
-    ghost.addEventListener('click', hideGhost);
-  } else {
-    console.log("Fantasma não encontrado!");
-  }
-});
+  ghost.addEventListener('click', hideGhost);
+}

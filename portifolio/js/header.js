@@ -1,3 +1,5 @@
+import { switchMenu } from "./menu"
+
 export function createHeader(){
     const header = document.getElementById("header")
 
@@ -5,7 +7,7 @@ export function createHeader(){
     logo_text.id = "logo_profession"
     logo_text.className = "start"
 
-    // Ghost Header
+    // Ghost
     let ghost = document.createElement("div")
     ghost.id = "ghost"
     ghost.className = "loader"
@@ -33,7 +35,15 @@ export function createHeader(){
     profession.id = "programming-title"
     profession.className = "center_alignment"
 
-    // Btns Header
+    // Menu
+    let btn_menu = document.createElement("button")
+    btn_menu.id = "btn_menu"
+    btn_menu.onclick = switchMenu
+
+    let menu = document.createElement("div")
+    menu.id = "menu_container"
+
+    // Btns 
     let btns_header = document.createElement("div")
     btns_header.id = "btns_header"
     btns_header.className = "space_around"
@@ -183,5 +193,8 @@ export function createHeader(){
     btns_header.appendChild(btn_53_2)
     btns_header.appendChild(btn_53_3)
 
-    header.appendChild(btns_header)
+    menu.appendChild(btns_header)
+
+    header.appendChild(btn_menu)
+    header.appendChild(menu)
 }

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+export function Ghost(){
     const eye = document.querySelector(".eye");
     const pupil = document.querySelector(".pupil");
   
@@ -31,5 +31,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     setInterval(blink, 10000);
-  });
+  };
   
