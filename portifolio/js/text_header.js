@@ -1,58 +1,57 @@
-export function TextHeader(){
-    const title = document.getElementById("programming-title")
-    const phrase = "ALUNO DE PROGRAMAÇÃO"
+document.addEventListener("DOMContentLoaded", () => {
+    const title = document.getElementById("programming-title");
+    const phrase = "ALUNO DE PROGRAMAÇÃO";
   
     function createLetters() {
       title.innerHTML = "";
       [...phrase].forEach((char, index) => {
-        const span = document.createElement("span")
-        span.classList.add("letter")
+        const span = document.createElement("span");
+        span.classList.add("letter");
   
         // Alterna entre subir e descer
         if (index % 2 === 0) {
-          span.classList.add("up")
+          span.classList.add("up");
         } else {
-          span.classList.add("down")
+          span.classList.add("down");
         }
   
-        span.textContent = char === " " ? "\u00A0" : char
-        title.appendChild(span)
-      })
+        span.textContent = char === " " ? "\u00A0" : char;
+        title.appendChild(span);
+      });
     }
   
     function animateIn() {
-      const letters = document.querySelectorAll(".letter")
+      const letters = document.querySelectorAll(".letter");
       letters.forEach((letter, i) => {
         setTimeout(() => {
-          letter.classList.add("enter")
-        }, i * 200)
-      })
+          letter.classList.add("enter");
+        }, i * 200);
+      });
   
-      const totalInTime = letters.length * 200
-      setTimeout(() => animateOut(letters), totalInTime + 5000)
+      const totalInTime = letters.length * 200;
+      setTimeout(() => animateOut(letters), totalInTime + 5000);
     }
   
     function animateOut(letters) {
       letters.forEach((letter, i) => {
         setTimeout(() => {
-          letter.classList.remove("enter")
+          letter.classList.remove("enter");
           if (i % 2 === 0) {
-            letter.classList.add("exit-up")
+            letter.classList.add("exit-up");
           } else {
-            letter.classList.add("exit-down")
+            letter.classList.add("exit-down");
           }
-        }, i * 200)
-      })
+        }, i * 200);
+      });
   
-      const totalOutTime = letters.length * 200
-      setTimeout(() => startCycle(), totalOutTime + 2000)
+      const totalOutTime = letters.length * 200;
+      setTimeout(() => startCycle(), totalOutTime + 2000);
     }
   
     function startCycle() {
-      createLetters()
-      animateIn()
+      createLetters();
+      animateIn();
     }
   
-    startCycle()
-  }
-  
+    startCycle();
+  });

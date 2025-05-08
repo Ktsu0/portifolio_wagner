@@ -1,4 +1,5 @@
-import { switchMenu } from "./menu"
+import { switchMenu } from "./menu.js"
+
 
 export function createHeader(){
     const header = document.getElementById("header")
@@ -36,12 +37,23 @@ export function createHeader(){
     profession.className = "center_alignment"
 
     // Menu
-    let btn_menu = document.createElement("button")
-    btn_menu.id = "btn_menu"
-    btn_menu.onclick = switchMenu
+    let btns_menu = document.createElement("div")
+    btns_menu.id = "btn_menu"
+    btns_menu.className ="column"
+    btns_menu.onclick = switchMenu
+
+    let menu_btn1 = document.createElement("span")
+    menu_btn1.className = "menu_btn menu_btn1"
+    
+    let menu_btn2 = document.createElement("span")
+    menu_btn2.className = "menu_btn menu_btn2"
+
+    let menu_btn3 = document.createElement("span")
+    menu_btn3.className = "menu_btn menu_btn3"
 
     let menu = document.createElement("div")
     menu.id = "menu_container"
+    menu.className = "space-around"
 
     // Btns 
     let btns_header = document.createElement("div")
@@ -193,8 +205,12 @@ export function createHeader(){
     btns_header.appendChild(btn_53_2)
     btns_header.appendChild(btn_53_3)
 
+    btns_menu.appendChild(menu_btn1)
+    btns_menu.appendChild(menu_btn2)
+    btns_menu.appendChild(menu_btn3)
+
     menu.appendChild(btns_header)
 
-    header.appendChild(btn_menu)
+    header.appendChild(btns_menu)
     header.appendChild(menu)
 }

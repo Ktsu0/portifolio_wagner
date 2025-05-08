@@ -1,11 +1,6 @@
-export function GhostShadow() {
+document.addEventListener('DOMContentLoaded', function() {
   const ghost = document.querySelector('.loader');
-  const particles = ghost?.querySelectorAll('.particle');
-
-  if (!ghost || !particles.length) {
-    console.log("Fantasma ou partículas não encontrados!");
-    return;
-  }
+  const particles = ghost.querySelectorAll('.particle');
 
   function hideGhost() {
     console.log("Fantasma clicado!");
@@ -14,8 +9,8 @@ export function GhostShadow() {
     particles.forEach(p => {
       const dx = (Math.random() - 0.5) * 200;
       const dy = (Math.random() - 0.5) * 200;
-      p.style.setProperty('--dx', `${dx}px`);
-      p.style.setProperty('--dy', `${dy}px`);
+      p.style.setProperty('--dx', `${dx}px`)
+      p.style.setProperty('--dy', `${dy}px`)
       p.style.animation = 'disperse 1s forwards';
     });
 
@@ -36,5 +31,9 @@ export function GhostShadow() {
     }, 10000);
   }
 
-  ghost.addEventListener('click', hideGhost);
-}
+  if (ghost) {
+    ghost.addEventListener('click', hideGhost);
+  } else {
+    console.log("Fantasma não encontrado!");
+  }
+});

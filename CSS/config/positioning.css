@@ -23,10 +23,15 @@
 .line{
     display: flex;
     flex-direction: row;
+    align-items:center;
+    justify-content:space-between;
 }
 .column{
     display: flex;
     flex-direction: column;
+    gap: 0.3vw;
+    justify-content: center;
+    align-items: center;
 }
 .start{
     display:flex;

@@ -1,4 +1,4 @@
-export function Ghost(){
+document.addEventListener('DOMContentLoaded', function() {
     const eye = document.querySelector(".eye");
     const pupil = document.querySelector(".pupil");
   
@@ -31,5 +31,5 @@ export function Ghost(){
     }
   
     setInterval(blink, 10000);
-  };
+  });
   
