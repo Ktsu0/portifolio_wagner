@@ -41,26 +41,43 @@ export function createHeader(){
     let btn_53_1 = document.createElement("button")
     btn_53_1.className = "btn_53"
 
-    btn_53_1.addEventListener('click', ()=>{
-        window.location.href = './index.html'
+    const currentPage = window.location.pathname
+
+    if (currentPage.includes("index.html") || currentPage === "/index.html") {
+        btn_53_1.addEventListener("click", () => {
+            window.location.href = "projects.html";
+        });
+    } else {
+        btn_53_1.addEventListener("click", () => {
+            window.location.href = "index.html";
+        })
     }
-    )
 
     let btn_53_2 = document.createElement("button")
     btn_53_2.className = "btn_53"
 
-    btn_53_2.addEventListener('click', ()=>{
-        window.location.href = './projects.html'
+    if (currentPage.includes("index.html") || currentPage === "/index.html") {
+        btn_53_2.addEventListener("click", () => {
+            window.location.href = "projects.html";
+        });
+    } else {
+        btn_53_2.addEventListener("click", () => {
+            window.location.href = "index.html";
+        })
     }
-    )
 
     let btn_53_3 = document.createElement("button")
     btn_53_3.className = "btn_53"
 
-    btn_53_3.addEventListener('click', ()=>{
-        window.location.href = './index.html'
+    if (currentPage.includes("index.html") || currentPage === "/index.html") {
+        btn_53_3.addEventListener("click", () => {
+            window.location.href = "projects.html";
+        });
+    } else {
+        btn_53_3.addEventListener("click", () => {
+            window.location.href = "index.html";
+        })
     }
-    )
 
     // btns_front
     let btn_original_1 = document.createElement("div")
