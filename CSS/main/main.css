@@ -13,7 +13,7 @@ main{
 #img_p{
   width:30%;
   height:88%;
-   background-image: url(./../Img/img_p.png);
+   background-image: url(./../../portifolio/Img/img_p.png);
    border-radius: 43% 43% 39% 30% / 34% 45% 58% 47%; 
    background-size: cover;
    background-position:center -5vh;    
