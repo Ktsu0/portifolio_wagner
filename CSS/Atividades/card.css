@@ -1,0 +1,43 @@
+#cards{
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(5, 15vw);
+    gap: 2vw;
+    margin: 2vw 0 0 0;
+}
+
+.card{
+    width: 100%;
+    height: 30vh;
+    background-color: var(--black);
+    border-radius: 10%;
+    border: solid, 2px, rebeccapurple;
+}
+.card i{
+    font-size:10vh;
+    color: var(--white);
+}
+.icon:hover{
+    transform: scale(1.3);
+}
+
+.card h1{
+    animation: ledders 14.5s ease-in-out infinite;
+
+}
+.card h4{
+    animation: ledders 15s ease-in-out infinite;  
+}
+
+@keyframes ledders{
+    0%, 47%, 52%, 100%{
+        transform: scale(1);
+        color: var(--white);
+    }
+    50%{
+        transform: scale(1.3);
+        color: var(--white_shadow); 
+    }
+}

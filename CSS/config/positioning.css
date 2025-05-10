@@ -39,6 +39,12 @@
     align-items:center;
     justify-content:start;
 }
+.end{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:end;
+}
 .edges{
     margin: 0;
     padding: 0;

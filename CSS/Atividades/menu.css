@@ -64,7 +64,7 @@
 
 
 #btn_menu.open .menu_btn1 {
-    transform: rotate(45deg) translate(5px, 10px);
+    transform: rotate(45deg) translate(66%, 15%);
 }
 
 #btn_menu.open .menu_btn2 {
@@ -72,5 +72,5 @@
 }
 
 #btn_menu.open .menu_btn3 {
-    transform: rotate(-45deg) translate(5px, -10px);
+    transform: rotate(-45deg) translate(50%, 50%);
 }
