@@ -1,5 +1,5 @@
 let actual_banner = 1;
-const qnt_banners = 3;
+const qnt_banners = 5;
 
 export function switchBanner(n_banner){
     let banners = document.getElementById('banners');
@@ -9,19 +9,20 @@ export function switchBanner(n_banner){
     for(let i = 1; i < qnt_banners + 1; i++){
         let btn = document.getElementById(`btn_banner_${i}`);
         if(n_banner == i){
-            btn.style.transform = 'scale(1.2)';
+            btn.style.transform = 'scale(1.3)'
+            btn.style.backgroundColor = "white"
         }else{
             btn.style.transform = 'scale(1)'
+            btn.style.backgroundColor ="rgba(240, 248, 255, 0.528)"
         }
     }
 }
-
 setInterval(()=>{
     if(actual_banner >= qnt_banners){
         actual_banner = 0;
     }
     switchBanner(actual_banner + 1);
-}, 4000);
+}, 6000);
 
 for (let i = 1; i <= qnt_banners; i++) {
     let btn = document.getElementById(`btn_banner_${i}`);

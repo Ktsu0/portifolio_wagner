@@ -39,7 +39,7 @@
     background-color: var(--white);
     border-radius: 20vh;
 
-    transition: all .6s ease;
+    transition: all 1s ease-in-out;
 }
 
 @keyframes pulse {
@@ -64,13 +64,18 @@
 
 
 #btn_menu.open .menu_btn1 {
-    transform: rotate(45deg) translate(66%, 15%);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 52%;
+    width: 2.3vw;
 }
 
 #btn_menu.open .menu_btn2 {
     opacity: 0;
+    
 }
 
 #btn_menu.open .menu_btn3 {
-    transform: rotate(-45deg) translate(50%, 50%);
+    transform: rotate(-45deg);
+    width: 2.3vw;
 }
