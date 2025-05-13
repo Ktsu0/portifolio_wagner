@@ -9,6 +9,7 @@ for(let i = 0; i < cards_bd.length; i++ ){
     div_cards.className = "card center_alignment column"
 
     let i_cards = document.createElement("img")
+    i_cards.className = ""
     i_cards.src = cards_bd[i].img
 
     let text_cards = document.createElement("h1")
