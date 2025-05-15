@@ -1,6 +1,5 @@
 import { switchMenu } from "./../../controller/activities/menu.js"
 
-
 export function createHeader(){
     const header = document.getElementById("header")
 
@@ -55,118 +54,75 @@ export function createHeader(){
     menu.id = "menu_container"
     menu.className = "space-around"
 
-    // Btns 
+    // Btns header container
     let btns_header = document.createElement("div")
     btns_header.id = "btns_header"
     btns_header.className = "space_around"
 
-    let btn_53_1 = document.createElement("button")
-    btn_53_1.className = "btn_53"
+    // Definição das páginas e links atualizada
+    const pages = [
+      { name: "HOME", href: "index.html", iconClass: "fa-solid fa-house-chimney" },
+      { name: "PROJETOS", href: "projects.html", iconClass: "fa-solid fa-folder" },
+      { name: "FORMAÇÕES", href: "formations.html", iconClass: "fa-solid fa-graduation-cap" }
+    ]
 
-    const currentPage = window.location.pathname
+    // Pega só o arquivo da URL atual
+    const currentPage = window.location.pathname.split("/").pop() || "index.html"
 
-    if (currentPage.includes("index.html") || currentPage === "/index.html") {
-        btn_53_1.addEventListener("click", () => {
-            window.location.href = "projects.html";
-        });
-    } else {
-        btn_53_1.addEventListener("click", () => {
-            window.location.href = "index.html";
-        })
-    }
+    // Criar os 3 botões dinamicamente
+    pages.forEach(({ name, href, iconClass }) => {
+        let btn = document.createElement("button")
+        btn.className = "btn_53"
 
-    let btn_53_2 = document.createElement("button")
-    btn_53_2.className = "btn_53"
+        // Ícone
+        let icon = document.createElement("i")
+        icon.className = `icon_h ${iconClass}`
 
-    if (currentPage.includes("index.html") || currentPage === "/index.html") {
-        btn_53_2.addEventListener("click", () => {
-            window.location.href = "projects.html";
-        });
-    } else {
-        btn_53_2.addEventListener("click", () => {
-            window.location.href = "index.html";
-        })
-    }
+        // Texto original
+        let btn_original = document.createElement("div")
+        btn_original.className = "original center_alignment"
 
-    let btn_53_3 = document.createElement("button")
-    btn_53_3.className = "btn_53"
+        let text_p = document.createElement("p")
+        text_p.textContent = name
 
-    if (currentPage.includes("index.html") || currentPage === "/index.html") {
-        btn_53_3.addEventListener("click", () => {
-            window.location.href = "projects.html";
-        });
-    } else {
-        btn_53_3.addEventListener("click", () => {
-            window.location.href = "index.html";
-        })
-    }
+        btn_original.appendChild(icon.cloneNode(true))
+        btn_original.appendChild(text_p)
 
-    // btns_front
-    let btn_original_1 = document.createElement("div")
-    btn_original_1.className = "original center_alignment"
+        // Letras animadas
+        let letter_div = document.createElement("div")
+        letter_div.className = "letters"
+        letter_div.dataset.text = name
 
-    let btn_original_2 = document.createElement("div")
-    btn_original_2.className = "original center_alignment"
+        for (let i = 0; i < name.length; i++) {
+            let span = document.createElement("span")
+            span.textContent = name[i]
+            letter_div.appendChild(span)
+        }
 
-    let btn_original_3 = document.createElement("div")
-    btn_original_3.className = "original center_alignment"
+        // Monta o botão
+        btn.appendChild(icon)
+        btn.appendChild(btn_original)
+        btn.appendChild(letter_div)
 
-    // Texts
-    let home = document.createElement("p")
-    home.textContent = "HOME"
+        // Se já estiver na página, desabilita o botão (opcional)
+        if(currentPage === href){
+            btn.disabled = true
+            btn.style.opacity = "0.6"
+            btn.style.cursor = "default"
+        } else {
+            btn.addEventListener("click", () => {
+                window.location.href = href
+            })
+        }
 
-    let projetos = document.createElement("p")
-    projetos.textContent = "PROJETOS"
+        btns_header.appendChild(btn)
+    })
 
-    let formacao = document.createElement("p")
-    formacao.textContent = "FORMAÇÃO"
+    btns_menu.appendChild(menu_btn1)
+    btns_menu.appendChild(menu_btn2)
+    btns_menu.appendChild(menu_btn3)
 
-    // Animation Letters
-    let letter_1 = document.createElement("div")
-    letter_1.className = "letters"
-    letter_1.dataset.text = "HOME"
-
-    let letter_2 = document.createElement("div")
-    letter_2.className = "letters"
-    letter_2.dataset.text = "PROJETOS"
-
-    let letter_3 = document.createElement("div")
-    letter_3.className = "letters"
-    letter_3.dataset.text = "FORMAÇÃO"
-
-    // Spans
-    for (let i = 0; i < letter_1.dataset.text.length; i++) {
-        let span = document.createElement("span");
-        span.textContent = letter_1.dataset.text[i];
-        letter_1.appendChild(span);
-      }
-
-    for (let i = 0; i < letter_2.dataset.text.length; i++) {
-        let span = document.createElement("span");
-        span.textContent = letter_2.dataset.text[i];
-        letter_2.appendChild(span);
-    }
-
-    for (let i = 0; i < letter_3.dataset.text.length; i++) {
-        let span = document.createElement("span");
-        span.textContent = letter_3.dataset.text[i];
-        letter_3.appendChild(span);
-    }
-
-    // Icons
-    let icon_1 = document.createElement("i")
-    icon_1.className = "icon_h fa-solid fa-house-chimney"
-
-    let icon_2 = document.createElement("i")
-    icon_2.className = "icon_h fa-solid fa-folder"
-
-    let icon_3 = document.createElement("i")
-    icon_3.className = "icon_h fa-solid fa-graduation-cap"
-
-    // Clones dos ícones
-    let icon_1_clone = icon_1.cloneNode(true)
-    let icon_2_clone = icon_2.cloneNode(true)
-    let icon_3_clone = icon_3.cloneNode(true)
+    menu.appendChild(btns_header)
 
     // Montagem do Ghost
     eye.appendChild(pupil)
@@ -180,36 +136,6 @@ export function createHeader(){
     logo_text.appendChild(ghost)
     logo_text.appendChild(profession)
     header.appendChild(logo_text)
-
-    // Botões com ícones e textos
-    btn_original_1.appendChild(icon_1_clone)
-    btn_original_1.appendChild(home)
-    btn_original_2.appendChild(icon_2_clone)
-    btn_original_2.appendChild(projetos)
-    btn_original_3.appendChild(icon_3_clone)
-    btn_original_3.appendChild(formacao)
-
-    btn_53_1.appendChild(icon_1)
-    btn_53_2.appendChild(icon_2)
-    btn_53_3.appendChild(icon_3)
-
-    btn_53_1.appendChild(btn_original_1)
-    btn_53_2.appendChild(btn_original_2)
-    btn_53_3.appendChild(btn_original_3)
-
-    btn_53_1.appendChild(letter_1)
-    btn_53_2.appendChild(letter_2)
-    btn_53_3.appendChild(letter_3)
-
-    btns_header.appendChild(btn_53_1)
-    btns_header.appendChild(btn_53_2)
-    btns_header.appendChild(btn_53_3)
-
-    btns_menu.appendChild(menu_btn1)
-    btns_menu.appendChild(menu_btn2)
-    btns_menu.appendChild(menu_btn3)
-
-    menu.appendChild(btns_header)
 
     header.appendChild(btns_menu)
     header.appendChild(menu)
