@@ -44,20 +44,20 @@
 }
 
 .flip-card-front {
-    background-color: var(--white);
+    background-image:radial-gradient(var(--white )70%,var(--white_shadow));
     color: black;
 }
 
 .flip-card-back {
-    background-color: var(--white_shadow);
+    background-image:radial-gradient(var(--white )70%,var(--white_shadow));
     color: black;
     transform: rotateY(180deg);
-    position: relative; /* necessário para posicionar os botões */
+    position: relative;
 }
 
 .imgs {
-    width: 70%;
-    height: auto;
+    width: 60%;
+    height: 80%;
     border-radius: 5vh;
 }
 
@@ -81,7 +81,7 @@
 
 .icon-button:hover {
     transform: scale(1.2);
-    color: var(--black);
+    color: var(--gray);
 }
 
 @media (max-width: 768px) {

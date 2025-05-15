@@ -6,4 +6,14 @@
   font-size: 8vh;
   animation: letras 120s ease-in-out infinite;
 }
-
+.text_projects:hover{
+  transform: scale(1.2);
+}
+@keyframes letras{
+  0%, 47%, 60%, 100%{
+    color: var(--white);
+  }
+  50%, 57%{
+    color: var(--white_shadow);
+  }
+}
