@@ -41,4 +41,5 @@ export const formation_bd = [
     diploma: "https://media.tenor.com/GhSe8lmxxOYAAAAM/funny-animal-dancing-cat.gif",
     institution: "https://media.tenor.com/m91pY6cGViIAAAAM/granny.gif",
   },
+  
 ]
