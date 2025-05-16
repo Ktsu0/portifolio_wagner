@@ -30,6 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 150);
     }
   
-    setInterval(blink, 10000);
+    setInterval(blink, 5000);
   });
   

@@ -4,7 +4,7 @@
 .text_projects{
   color: var(--white);
   font-size: 8vh;
-  animation: letras 120s ease-in-out infinite;
+  animation: letras 25s ease-in-out infinite;
 }
 .text_projects:hover{
   transform: scale(1.2);

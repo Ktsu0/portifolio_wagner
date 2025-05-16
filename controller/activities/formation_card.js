@@ -14,7 +14,7 @@ export function createFormation() {
         flip_card_front.className = "flip-card-front column"
 
         let name_cards = document.createElement("h1")
-        name_cards.style.fontSize = "3vh"
+        name_cards.style.fontSize = "2.8vh"
         name_cards.textContent = formation_bd[i].name
 
         let i_cards = document.createElement("img")
