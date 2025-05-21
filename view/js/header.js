@@ -135,8 +135,8 @@ export function createHeader(){
     logo_text.appendChild(ghost_fog)
     logo_text.appendChild(ghost)
     logo_text.appendChild(profession)
-    header.appendChild(logo_text)
 
+    header.appendChild(logo_text)
     header.appendChild(btns_menu)
     header.appendChild(menu)
 }
